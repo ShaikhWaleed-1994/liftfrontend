@@ -1,0 +1,17 @@
+{
+    "routes": [
+      {
+        "route": "/exercise-programs",
+        "rewrite": "/index.html"
+      },
+      {
+        "route": "/api/*",
+        "rewrite": "/api-function-endpoint"
+      },
+      {
+        "route": "/*",
+        "rewrite": "/index.html"
+      }
+    ]
+  }
+  
