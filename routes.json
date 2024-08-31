@@ -1,10 +1,6 @@
 {
     "routes": [
       {
-        "route": "/nutrition-programs",
-        "serve": "/index.html"
-      },
-      {
         "route": "/{*path}",
         "serve": "/index.html",
         "statusCode": 200
