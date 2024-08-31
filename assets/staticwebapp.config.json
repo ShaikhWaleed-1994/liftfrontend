@@ -1,0 +1,13 @@
+{
+    "routes": [
+      {
+        "route": "/exercise-programs",
+        "rewrite": "/index.html"
+      },
+      {
+        "route": "/*",
+        "rewrite": "/index.html"
+      }
+    ]
+  }
+  
