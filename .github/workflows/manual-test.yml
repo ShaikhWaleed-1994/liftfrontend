@@ -1,0 +1,22 @@
+name: Test Dispatch
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        type: environment
+        required: false
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment || '' }}
+    steps:
+      - name: Print inputs
+        run: |
+          echo "Triggered via workflow_dispatch"
+          echo "Branch/ref: ${{ github.ref_name }}"
+          echo "Environment: ${{ inputs.environment || '(none selected)' }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Timestamp: $(date -u)"
